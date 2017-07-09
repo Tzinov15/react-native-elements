@@ -10,6 +10,7 @@ import {
 
 import Icon from '../icons/Icon';
 import Text from '../text/Text';
+import CachedImage from 'react-native-cached-image';
 
 const Avatar = props => {
   const {
@@ -67,7 +68,7 @@ const Avatar = props => {
   const renderContent = () => {
     if (source) {
       return (
-        <Image
+        <CachedImage
           style={[
             styles.avatar,
             rounded && { borderRadius: width / 2 },
