@@ -16,6 +16,8 @@ import colors from '../config/colors';
 import fonts from '../config/fonts';
 import normalize from '../helpers/normalizeText';
 
+import CachedImage from 'react-native-cached-image';
+
 const ListItem = props => {
   const {
     onPress,
@@ -107,7 +109,7 @@ const ListItem = props => {
                 />
               </View>}
         {avatar &&
-          <Image
+          <CachedImage
             style={[
               styles.avatar,
               roundAvatar && { borderRadius: 17 },
